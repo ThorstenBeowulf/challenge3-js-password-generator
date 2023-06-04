@@ -1,1 +1,11 @@
-# challenge3-js-password-generator
+# Javascript Password Generator
+
+## Goals
+
+## Features
+
+## Deployed application
+
+## Acknowledgments
+
+## Licence
