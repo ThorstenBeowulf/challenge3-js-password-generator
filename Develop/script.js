@@ -13,11 +13,21 @@ generateBtn.addEventListener("click", writePassword);
 // Random string generator
 function generatePassword() {
   var passwordLength = window.prompt("How long would you like your password?");
+  // attempts conversion to number, returns NaN if unsuccessful
+  Number(passwordLength);
+  // checks if passwordLength is a number and within a range
+  if (isNaN(passwordLength)) {
+    return "Password length must be a number"
+  } else if (passwordLength < 8 || passwordLength > 64) {
+    return "Password must be between 8 and 64 characters long"
+  } 
+  // popup windows for user selction
   var includeLower = window.confirm("Include lower-case letters?");
   var includeCaps = window.confirm("Include capital letters?");
   var includeNum = window.confirm("Include numbers?");
   var includeSpecial = window.confirm("Include special characters?");
   var includedCharacters = [];
+  // result string of generatePassword()
   var stringOut = [];
 
   if (includeLower) {
@@ -33,13 +43,15 @@ function generatePassword() {
     includedCharacters = includedCharacters.concat(specialChar);
   }
 
-  // console.log(includedCharacters);
+// message if nothing was confirmed
+  if (includedCharacters.length < 1) {
+    return "No characters were selected";
+  } 
 
   for (let index = 0; index < passwordLength; index++) {
     let randomIndex = Math.floor(Math.random() * includedCharacters.length);
     stringOut.push(includedCharacters[randomIndex]);
   }
-
   return stringOut.join('');
 }
 
