@@ -18,8 +18,8 @@ function generatePassword() {
   // checks if passwordLength is a number and within a range
   if (isNaN(passwordLength)) {
     return "Password length must be a number"
-  } else if (passwordLength < 8 || passwordLength > 64) {
-    return "Password must be between 8 and 64 characters long"
+  } else if (passwordLength < 8 || passwordLength > 128) {
+    return "Password must be between 8 and 128 characters long"
   } 
   // popup windows for user selction
   var includeLower = window.confirm("Include lower-case letters?");
