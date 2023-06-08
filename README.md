@@ -15,7 +15,9 @@ The app takes user input for the length of the string and which sets of characte
 
 ## Deployed application
 
+Link to deployed page: https://thorstenbeowulf.github.io/challenge3-js-password-generator/
 
+![image](https://github.com/ThorstenBeowulf/challenge3-js-password-generator/assets/90459268/70d061cf-5cfd-4702-a484-e92e87b925e4)
 
 ## Licence
 
